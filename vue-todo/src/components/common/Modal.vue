@@ -1,33 +1,28 @@
 <template>
-  <transition name="modal">
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
+    <transition name="modal">
+        <div class="modal-mask">
+          <div class="modal-wrapper">
+            <div class="modal-container">
 
-          <div class="modal-header">
-            <slot name="header">
-              default header
-            </slot>
-          </div>
+              <div class="modal-header">
+                <slot name="header">
+                  default header
+                </slot>
+              </div>
 
-          <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
+              <div class="modal-body">
+                <slot name="body">
+                  default body
+                </slot>
+              </div>
+
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </transition>
+      </transition>
 </template>
-<script>
-export default {
-  
-}
-</script>
 <style scoped>
-
-  .modal-mask {
+.modal-mask {
   position: fixed;
   z-index: 9998;
   top: 0;
@@ -68,15 +63,6 @@ export default {
   float: right;
 }
 
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
-
 .modal-enter {
   opacity: 0;
 }
@@ -90,5 +76,4 @@ export default {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
 </style>
